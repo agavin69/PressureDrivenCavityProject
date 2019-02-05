@@ -171,28 +171,7 @@ def visual(u,v,p,X,Y,u51,v51,p51,u200,v200,p200,x51,y51,x200,y200,div_diag1_51,d
     pyplot.colorbar()
     pyplot.show()
 
-    #path = 'C:\Users\antho\OneDrive\Documents\Adv CFD' # Home Computer
 
-
-    # if file is saved in the same directory simply use: path = 'data.xlsx'
-    #wb   = load_workbook(path2,guess_types = True)
-    #ws   = wb.active
-    #ghia_u = numpy.zeros((15-2,1))
-    #ghia_y = numpy.zeros((15-2,1))
-    #ghia_x = numpy.zeros((22-2,1))
-    #ghia_v = numpy.zeros((22-2,1))
-
-    #for i in range(ghia_u.size):
-        #cell1 = 'A' + str(i+3)
-        #cell2 = 'B' + str(i+3)
-        #ghia_u[i][0] = ws[cell1].value
-        #ghia_y[i][0] = ws[cell2].value
-
-    #for i in range(ghia_v.size):
-      #  cell1 = 'C' + str(i+3)
-       # cell2 = 'D' + str(i+3)
-        #ghia_x[i][0] = ws[cell1].value
-        #ghia_v[i][0] = ws[cell2].value
 
     pyplot.figure(4)
     #pyplot.plot(u51[:,25],y51,'b',u[:,51],y,'r',u200[:,101],y200,'g',ghia_u,ghia_y,'k x')
@@ -210,7 +189,7 @@ def visual(u,v,p,X,Y,u51,v51,p51,u200,v200,p200,x51,y51,x200,y200,div_diag1_51,d
     pyplot.xlabel("x")
     pyplot.show()
 
-    # Streamlines 
+    # Streamlines
     pyplot.figure(6)
     pyplot.streamplot(X[::2,::2],Y[::2,::2],u[::2,::2],v[::2,::2],3)
     pyplot.title("Streamlines")
@@ -254,7 +233,7 @@ def visual(u,v,p,X,Y,u51,v51,p51,u200,v200,p200,x51,y51,x200,y200,div_diag1_51,d
 Re = 100
 nx = 101
 ny = 101
-time_iter = 15000
+time_iter = 25000
 nit = 400
 dx = 1/ (nx - 1)
 dy = 1 / (ny - 1)
